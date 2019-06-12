@@ -1,0 +1,248 @@
+			    <html>
+			        <head> 
+			            <meta charset="utf-8">
+			            <title>GAME OF KNOWLEDGE</title>
+			            <meta charset="utf-8">
+					  <meta name="viewport" content="width=device-width, initial-scale=1">
+					  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+					  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+					  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+					  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			            
+					<style type="text/css">
+					body{
+						background-image: url("img/rede2.jpg");
+						background-size:1600px 1000px;
+					}
+					.container{
+						background-image: linear-gradient(to right, rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,.3) 1px, transparent 1px);
+						background-size: 50px 50px, 10px 30px;
+						background-repeat: repeat-x;
+						width:75%;
+						background-color: rgba(79, 90, 79, 0.8);
+						color:white;
+					}
+					img{
+						width:100%;
+						margin:auto;
+					}
+					.resp{
+						
+						height:530px;
+						background-color:black;
+						border-radius:10px;
+						text-align:center;
+						box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+						vertical-align:middle;
+					}
+					h1{
+						font-size:60px;
+					}
+					.pe{
+						transform: rotate(90deg);
+						text-align: right;
+						padding-left:40px;
+					}
+					.branco{
+						background-color:white;
+						width:90%;
+						height:75px;
+						margin:5px;
+						color:black;
+						border-radius:5px;
+						box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+					}
+					.ngrupo{
+						width:50%;
+						height:70px;
+						float:left;
+						text-align:center;
+					}
+					.branco:click{
+						background-color:yellow;
+					}
+					</style>
+			        </head>
+			    <body>
+			    	<!-- Início Modal -->
+						  <div class="modal fade" id="myModal">
+						    <div class="modal-dialog modal-dialog-centered">
+						      <div class="modal-content">
+						      
+						        <!-- Modal Header -->
+						        <div class="modal-header">
+						          <h4 class="modal-title">CADASTRO DE TIME</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        </div>
+						        
+						        <!-- Modal body -->
+						        <div class="modal-body">
+						        <h6>Nome do Time</h6>
+						        <input type="text" class="form-control grupo"/>
+						        <h6>Selecione seu avatar</h6>
+						        <button class="btn btn-link ico0"><img src="/ico/ico0.gif"></button>
+						        <button class="btn btn-link ico1"><img src="/ico/ico1.gif"></button>
+						        <button class="btn btn-link ico2"><img src="/ico/ico2.gif"></button>
+						        <button class="btn btn-link ico3"><img src="/ico/ico3.gif"></button>
+						        <button class="btn btn-link ico4"><img src="/ico/ico4.gif"></button><br>
+						        <button class="btn btn-link ico5"><img src="/ico/ico5.gif"></button>
+						        <button class="btn btn-link ico6"><img src="/ico/ico6.gif"></button>
+						        <button class="btn btn-link ico7"><img src="/ico/ico7.gif"></button>
+						        <button class="btn btn-link ico8"><img src="/ico/ico8.gif"></button>
+						        <button class="btn btn-link ico9"><img src="/ico/ico9.gif"></button>
+						        </div>
+						        
+						        <!-- Modal footer -->
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-info add" data-dismiss="modal">Adicionar</button>
+						          
+						        </div>
+						        
+						      </div>
+						    </div>
+						  </div>
+						  <!-- Fim Modal -->
+			        <div class="container">
+					    
+			           <div class="row">
+			           		<div class="col-sm-4">
+			           			<br><br>
+			           			<h1 class="text-center pe">JOGO</h1>
+			           		</div>
+			           		<div class="col-sm-4">
+			           			<br><br>
+			           			<h1 class="text-center">DOS</h1>
+		   			           <div class='row'>
+					              <div class="col-md-12">
+					                 <form class="form-horizontal" method="post" action="" id="formulario">
+				                 	 	<div class="form-group">
+					                       <div class="col-sm-12">
+					                           <label for="pergunta">PERGUNTA</label>
+					                           <input type="number" class="form-control questao" name="pergunta" >
+					                       </div>
+				                    	</div>
+				                    	<div class="form-group">
+					                       <div class="col-sm-12">
+					                       	<label for="resposta">RESPOSTA</label>
+					                           <input type="text" class="form-control resposta" name="resposta" >
+					                       </div>
+					                       <div class="col-sm-2 figura2">
+					                       	
+					                       </div>
+				                    	</div>
+					                    <div class="form-group">
+					                    	<div class="col-sm-2">
+												
+											</div>
+					                       <div class="col-sm-12 text-center">
+					                        <input type="button" class="btn btn-primary botao" name="enviar" value="Enviar">
+					                        <input type="reset" class="btn btn-danger" value="Limpar">
+					                       </div>
+					                    </div>
+					                 </form>
+					              </div>
+					           </div>
+			           		</div>
+			           		<div class="col-sm-4">
+			           			<br><br>
+			           			<h1 class="text-center pe">&nbsp;&nbsp;&nbsp;&nbsp;SABERES</h1>
+			           		</div>
+			           </div>
+			           <div class="row">
+			           		<div class="col-sm-3">
+			           			
+			           			<div id="flip">
+			           				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+									    +
+									</button>
+		           				</div>
+								<ul class="primeiro">
+										
+								</ul>
+			           		</div>
+			           		<div class="col-sm-6 resp"></div>
+			           		<div class="col-sm-3">
+			           			<div id="flip2">
+			           				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+									    +
+									</button>
+		           				</div>
+			           			<ul class="segundo">
+										
+								</ul>
+			           		</div>
+			           </div>
+			        </div>
+			        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+			        <script>
+			            var icone;
+			            $(document).ready(function () {
+			            	$('.container').css('height',$(window).height());
+			            	$("#panel").hide();
+							var cont = 0;
+			    		 $('.botao').click(function() {
+			                    var dados =  {'questao': $('.questao').val(), 'resposta':$('.resposta').val()};
+			                    $.ajax({
+			                        type : 'POST',
+			                        url  : 'sendemail.php',
+			                        data : dados,
+			                        success :  function(response){
+			                        	$('.resp').html(response);
+			                            $('.questao').val("");
+			                            $('.resposta').val("");
+			                        }
+			                    });
+			                });
+			            	$("#myBtn").click(function(){
+							    $("#myModal").modal();
+							  });
+							$(".add").click(function(){
+								if(cont<6){
+							    $(".primeiro").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h3>NOME:</h3>"+$('.grupo').val()+"</div><div class='ngrupo'><a href='#' class='ponto'><img src='"+icone+"'style='width:70%; margin:3px;'></a></div></div>");
+							    cont++;
+								}else if(cont>=6 && cont<12){
+									$(".segundo").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h3>NOME:</h3>"+$('.grupo').val()+"</div><div class='ngrupo'><a href='#' class='ponto'><img src='"+icone+"'style='width:70%; margin:3px;'></a></div></div>");
+							    	cont++;
+								}else{
+									$("#panel").hide();
+								}
+								$('.grupo').val('');
+							});
+							$('.ico0').click(function() {
+							    icone="ico/ico0.gif";
+							});
+							$('.ico1').click(function() {
+							    icone="ico/ico1.gif";
+							});
+							$('.ico2').click(function() {
+							    icone="ico/ico2.gif";
+							});
+							$('.ico3').click(function() {
+							    icone="ico/ico3.gif";
+							});
+							$('.ico4').click(function() {
+							    icone="ico/ico4.gif";
+							});
+							$('.ico5').click(function() {
+							    icone="ico/ico5.gif";
+							});
+							$('.ico6').click(function() {
+							    icone="ico/ico6.gif";
+							});
+							$('.ico7').click(function() {
+							    icone="ico/ico7.gif";
+							});
+							$('.ico8').click(function() {
+							    icone="ico/ico8.gif";
+							});
+							$('.ico9').click(function() {
+							    icone="ico/ico9.gif";
+							});
+							$('.ponto').click(function() {
+							    alert("clicado");
+							});
+				         });
+			            
+			        </script>
+			    </body>
+			    </html>
