@@ -58,7 +58,7 @@
 						float:left;
 						text-align:center;
 					}
-					.branco:click{
+					.branco:link{
 						background-color:yellow;
 					}
 					</style>
@@ -149,7 +149,7 @@
 			           		</div>
 			           </div>
 			           <div class="row">
-			           		<div class="col-sm-3">
+			           		<div class="col-sm-2">
 			           			
 			           			<div id="flip">
 			           				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
@@ -157,11 +157,11 @@
 									</button>
 		           				</div>
 								<ul class="primeiro">
-										
+
 								</ul>
 			           		</div>
-			           		<div class="col-sm-6 resp"></div>
-			           		<div class="col-sm-3">
+			           		<div class="col-sm-8 resp"></div>
+			           		<div class="col-sm-2">
 			           			<div id="flip2">
 			           				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
 									    +
@@ -176,10 +176,11 @@
 			        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 			        <script>
 			            var icone;
+			            var cont = 0;
 			            $(document).ready(function () {
 			            	$('.container').css('height',$(window).height());
 			            	$("#panel").hide();
-							var cont = 0;
+							
 			    		 $('.botao').click(function() {
 			                    var dados =  {'questao': $('.questao').val(), 'resposta':$('.resposta').val()};
 			                    $.ajax({
@@ -198,10 +199,10 @@
 							  });
 							$(".add").click(function(){
 								if(cont<6){
-							    $(".primeiro").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h3>NOME:</h3>"+$('.grupo').val()+"</div><div class='ngrupo'><a href='#' class='ponto'><img src='"+icone+"'style='width:70%; margin:3px;'></a></div></div>");
+							    $(".primeiro").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h5 class='ponto'>NOME:</h5>"+$('.grupo').val()+"</div><div class='ngrupo'><img src='"+icone+"'style='width:60%; margin:3px;'></div></div>");
 							    cont++;
 								}else if(cont>=6 && cont<12){
-									$(".segundo").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h3>NOME:</h3>"+$('.grupo').val()+"</div><div class='ngrupo'><a href='#' class='ponto'><img src='"+icone+"'style='width:70%; margin:3px;'></a></div></div>");
+									$(".segundo").append("<div name='"+$('.grupo').val()+"'class='branco "+$('.grupo').val()+"'><div class='ngrupo'><h5 class='ponto'>NOME:</h5>"+$('.grupo').val()+"</div><div class='ngrupo'><img src='"+icone+"'style='width:60%; margin:3px;'></div></div>");
 							    	cont++;
 								}else{
 									$("#panel").hide();
@@ -238,11 +239,11 @@
 							$('.ico9').click(function() {
 							    icone="ico/ico9.gif";
 							});
-							$('.ponto').click(function() {
-							    alert("clicado");
-							});
+												
 				         });
-			            
+			            	$(document).on('click','.branco',function() {
+							    
+							});	
 			        </script>
 			    </body>
 			    </html>
